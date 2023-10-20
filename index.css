@@ -35,7 +35,7 @@ button:hover{
         rgba(0, 0, 0, 0.1),
         rgba(0,0,0,0.4)
     )
-}
+} 
 
 .container{
     max-width: 1400px;
@@ -216,7 +216,9 @@ footer .container{
     align-items: flex-end;
 }
 
+/* Celulares project */
 @media (max-height: 700px){
+
     header{
         position: fixed;
         width: 100%;
@@ -361,6 +363,20 @@ footer .container{
     }
 }
 
-/* Celulares project */
+
+/* CELULARES GOOD */
+@media (min-height: 700px){
+
+    header{
+        display: none;
+    }
+
+    #somos-deli-ever p{
+        text-align: justify;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+}
 
 

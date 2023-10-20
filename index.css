@@ -216,7 +216,7 @@ footer .container{
     align-items: flex-end;
 }
 
-@media (max-height: 768px){
+@media (max-height: 700px){
     header{
         position: fixed;
         width: 100%;

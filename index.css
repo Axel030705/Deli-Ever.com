@@ -216,7 +216,7 @@ footer .container{
     align-items: flex-end;
 }
 
-@media (min-width: 700px){
+@media (max-height: 768px){
     header{
         position: fixed;
         width: 100%;
@@ -362,15 +362,5 @@ footer .container{
 }
 
 /* Celulares project */
-@media (max-width: 768px) {
-    .carta {
-        width: 100%; /* Ocupa el ancho completo de la pantalla en dispositivos móviles */
-        height: auto; /* Ajusta la altura automáticamente según el contenido */
-    }
 
-    .btn_carta {
-        position: static; /* Restaura la posición predeterminada de los botones */
-        width: 100%; /* Ocupa el ancho completo de la carta en dispositivos móviles */
-        margin-top: 10px; /* Espacio entre el texto y el botón en dispositivos móviles */
-    }
-}
+

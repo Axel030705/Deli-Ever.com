@@ -647,8 +647,8 @@ footer .container {
 
     #nosotros .card-container {
         display: flex;
-        justify-content: center;
-        /* Centrar horizontalmente las tarjetas */
+        flex-direction: row;
+        justify-content: center; /* Centrar horizontalmente las tarjetas */
         margin-top: 30px;
     }
 

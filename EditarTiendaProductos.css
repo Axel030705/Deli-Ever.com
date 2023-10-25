@@ -108,12 +108,12 @@ footer .container {
     }
 
     #Info .img-container {
-        background-image: url("media/MockupRT.jpg");
+        background-image: url("media/MockupETP.jpg");
         background-size: cover;
         background-position: center center;
-        width: 360px;
-        height: 620px;
-        margin-top: 70px;
+        height: 500px;
+        width: 400px;
+        margin-top: 65px;
     }
 
     footer .container {

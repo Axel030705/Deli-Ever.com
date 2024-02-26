@@ -21,3 +21,11 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = "EditarTiendaProductos.html";
     });
 });
+
+/* Boton contacto */
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("Btn_Contacto").addEventListener("click", function () {
+        // Redirigir a otra página
+        window.location.href = "Contacto.html";
+    });
+});

@@ -7,6 +7,9 @@
     <title>Deli - Ever</title>
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
+    <script src="firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js"></script>
 </head>
 
 <body>
@@ -145,20 +148,6 @@
                         </div>
                     </div>
                 </div>
-                <!--<div class="card">
-                    <div class="lines"></div>
-                    <div class="img"> <img src="media/daniel.webp"></div>
-                    <div class="content">
-                        <div class="details">
-                            <h2>Daniel <br> <span>QA Tester</span></h2>
-                            <div class="data">
-                                <h3>Java<br><span>85%</span></h3>
-                                <h3>C++<br><span>100%</span></h3>
-                                <h3>Python<br><span>60%</span></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
     </section>
 
@@ -166,6 +155,10 @@
         <h2>Nos encantaria hablar contigo!</h2>
         <button id="Btn_Contacto">Contactanos</button>
     </section>
+
+    <div id="contenedor-usuarios">
+        <h3>Usuarios</h3>
+    </div>
 
     <footer>
         <div class="container">

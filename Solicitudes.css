@@ -13,7 +13,7 @@ body {
     background-color: rgb(30, 30, 30);
 }
 
-
+/*CSS del contenedor de cada usuario */
 .usuario {
     border: 1px solid #0bd6dd;
     margin: 10px;
@@ -24,4 +24,34 @@ body {
 
 #contenedor-usuarios{
     display: flex;
+}
+
+/*Nombre usuario*/
+.nombre-container {
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.nombre-container p{
+    color: #000000;
+}
+
+.nombre-titulo {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin-right: 5px;
+}
+
+/*Correo usuario*/
+.correo-container {
+    display: flex; 
+    align-items: center;
+    height: 30px;
+}
+
+.correo-titulo {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin-right: 5px;
 }

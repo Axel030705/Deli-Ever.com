@@ -33,11 +33,24 @@ function mostrarDatosUsuarios(snapshot) {
         usuarioContainer.classList.add('usuario');
 
         // Crear elementos HTML para mostrar los datos del usuario
+        
+        //Nombre
+        const nombreContainer = document.createElement('div'); // Crear un contenedor para el texto "Correo:" y el correo electrónico
+        nombreContainer.classList.add('nombre-container'); // Agregar clase CSS al contenedor
+        const nombreTituloSpan = document.createElement('span');
+        nombreTituloSpan.textContent = 'Nombre: ';
+        nombreTituloSpan.classList.add('nombre-titulo'); // Agregar clase CSS al elemento
         const nombreP = document.createElement('p');
-        nombreP.textContent = `Nombre: ${usuario.nombre}`;
+        nombreP.textContent = usuario.nombre;
 
+        //Correo
+        const correoContainer = document.createElement('div'); // Crear un contenedor para el texto "Correo:" y el correo electrónico
+        correoContainer.classList.add('correo-container'); // Agregar clase CSS al contenedor
+        const correoTituloSpan = document.createElement('span');
+        correoTituloSpan.textContent = 'Correo: ';
+        correoTituloSpan.classList.add('correo-titulo'); // Agregar clase CSS al elemento
         const correoP = document.createElement('p');
-        correoP.textContent = `Correo: ${usuario.correo}`;
+        correoP.textContent = usuario.correo;
 
         const tipoUsuarioP = document.createElement('p');
         tipoUsuarioP.textContent = `Tipo de usuario: ${usuario['Tipo de usuario']}`;
@@ -47,11 +60,22 @@ function mostrarDatosUsuarios(snapshot) {
 
         const Btn_rechazar = document.createElement('button');
 
+
         // Agregar los elementos al contenedor del usuario
-        usuarioContainer.appendChild(nombreP);
-        usuarioContainer.appendChild(correoP);
+
+        //Nombre
+        nombreContainer.appendChild(nombreTituloSpan);
+        nombreContainer.appendChild(nombreP);
+        usuarioContainer.appendChild(nombreContainer);
+
+        //Correo
+        correoContainer.appendChild(correoTituloSpan);
+        correoContainer.appendChild(correoP);
+        usuarioContainer.appendChild(correoContainer);
+
         usuarioContainer.appendChild(tipoUsuarioP);
         usuarioContainer.appendChild(venderaP);
+        //usuarioContainer.appendChild(Btn_rechazar);
 
         contenedorUsuarios.appendChild(usuarioContainer); // Agregar el contenedor del usuario al contenedor principal
     });

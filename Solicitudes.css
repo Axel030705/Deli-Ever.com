@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgb(30, 30, 30);
+}
+
+
+.usuario {
+    border: 1px solid #0bd6dd;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    width: 800px;
+}
+
+#contenedor-usuarios{
+    display: flex;
+}

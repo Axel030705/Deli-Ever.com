@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicia Sesión</title>
+    <link rel="icon" type="image/png" href="media/icono.png">
+    <link rel="stylesheet" href="IniciarSesion.css">
+    <script type="module" src="./IniciarSesion.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.1.1/firebase-auth.js"></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <form class="login" id="loginForm">
+            <p class="title">Inicia sesión</p>
+            <input type="email" id="email" placeholder="Correo" autofocus/>
+            <i class="fa fa-user"></i>
+            <input type="password" id="password" placeholder="Contraseña" />
+            <i class="fa fa-key"></i>
+            <button type="submit">
+                <i class="spinner"></i>
+                <span class="state">Iniciar sesión</span>
+            </button>
+        </form>
+        <p id="errorMessage" style="color: red;"></p>
+    </div>
+
+</body>
+
+</html>

@@ -62,7 +62,7 @@ document.querySelector('#loginForm').addEventListener('submit', (e) => {
                                 const userType = userData["Tipo de usuario"];
                                 // Puedes redirigir al usuario o realizar acciones según su tipo de usuario
                                 if (userType === "Admin") {
-                                    window.location.href = "Solicitudes.html";
+                                    window.location.href = "MenuAdmin.html";
                                 } else if(userType === "Vendedor"){
                                     window.location.href = "index.html"
                                 } else if(userType === "Cliente"){

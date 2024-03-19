@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pregunta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Añadí un poco de espacio alrededor del contenido */
+    border: solid 2px;
+    border-color: #19A7CE;
+    width: 500px;
+    height: 200px;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.soli, .msj {
+    background-color: #19A7CE;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 10px; /* Modifiqué el margen para que los botones estén más juntos */
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.soli:hover, .msj:hover {
+    background-color: #1590b3;
+}
+
+.soli:focus, .msj:focus {
+    outline: none;
+}

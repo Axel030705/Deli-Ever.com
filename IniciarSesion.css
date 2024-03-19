@@ -72,13 +72,11 @@ body {
       button {
         background-color: #e61912;
         .spinner {
-          border-radius: 0;
-          border-top-color: transparent;
-          border-right-color: transparent;
-          height: 20px;
-          animation: none;
-          transform: rotateZ(-45deg);
+          opacity: 0;
         }
+
+        
+
       }
     }
   
@@ -96,7 +94,7 @@ body {
         color: #fff;
         font-size: 1em;
         position: absolute;
-        margin-top: -47px;
+        margin-top: -42px;
         opacity: 0;
         left: 0;
         transition: all 0.1s ease-in;

@@ -65,9 +65,10 @@ document.querySelector('#loginForm').addEventListener('submit', (e) => {
                                     window.location.href = "Solicitudes.html";
                                 } else if(userType === "Vendedor"){
                                     window.location.href = "index.html"
-                                } 
-                                else {
-                                   //window.location.href = "pagina_por_defecto.html";
+                                } else if(userType === "Cliente"){
+                                    window.location.href = "index.html"
+                                } else {
+                                   //window.location.href = "index.html";
                                 }
                             }
                         })
@@ -85,11 +86,11 @@ document.querySelector('#loginForm').addEventListener('submit', (e) => {
             loginForm.classList.add('loading');
             state.innerHTML = 'Validando';
             setTimeout(function() {
-                loginForm.classList.add('no');
+                loginForm.classList.add('no', 'incorrect');
                 state.innerHTML = 'Correo o contraseña incorrectos';
                 setTimeout(function() {
                     state.innerHTML = 'Iniciar sesión';
-                    loginForm.classList.remove('no', 'loading');
+                    loginForm.classList.remove('no', 'loading', 'incorrect');
                     working = false;
                 }, 1500);
             }, 1500);

@@ -19,7 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px; /* Añadí un poco de espacio alrededor del contenido */
+    padding: 20px;
     border: solid 2px;
     border-color: #19A7CE;
     width: 500px;

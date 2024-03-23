@@ -31,7 +31,7 @@ function mostrarDatosUsuarios(snapshot) {
         const usuario = childSnapshot.val();
         
         // Verificar si el usuario es un vendedor
-        if (usuario['Tipo de usuario'] === 'Vendedor' /*&& usuario['estado'] === 'pendiente'*/) {
+        if (usuario['Tipo de usuario'] === 'Vendedor' && usuario['estado'] === 'pendiente') {
             const usuarioContainer = document.createElement('div'); // Crear un contenedor individual para el usuario
             usuarioContainer.classList.add('usuario');
 

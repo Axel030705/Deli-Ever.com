@@ -29,8 +29,32 @@ document.addEventListener('DOMContentLoaded', () => {
         const { email, password } = JSON.parse(savedUser);
         signInWithEmailAndPassword(auth, email, password)
             .then(() => {
-                // Redirigir al usuario a la página correspondiente después del inicio de sesión automático
-                window.location.href = "index.html"; // Cambia esto según tus necesidades
+                const user = userCredential.user;
+                const userRef = ref(database, 'Usuarios/' + user.uid);
+                // Obtener los datos del usuario una vez
+                get(userRef)
+                    .then((snapshot) => {
+                        const userData = snapshot.val();
+                        if (userData) {
+                            // Aquí puedes acceder a la información adicional del usuario
+                            const userType = userData["Tipo de usuario"];
+                            // Puedes redirigir al usuario o realizar acciones según su tipo de usuario
+                            if (userType === "Admin") {
+                                window.location.href = "MenuAdmin.html";
+                            } else if (userType === "Vendedor") {
+                                window.location.href = "index.html"
+                            } else if (userType === "Cliente") {
+                                window.location.href = "indexCliente.html"
+                            } else {
+                                //window.location.href = "index.html";
+                            }
+                        }
+                    })
+                    .catch((error) => {
+                        console.error('Error al obtener información adicional del usuario:', error);
+                    });
+
+
             })
             .catch((error) => {
                 console.error('Error al iniciar sesión automáticamente:', error);
@@ -55,17 +79,17 @@ document.querySelector('#loginForm').addEventListener('submit', (e) => {
     // Iniciar sesión con correo electrónico y contraseña
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            // Acceso exitoso, redirigir a index.html
+            // Acceso exitoso
             loginForm.classList.add('loading');
             state.innerHTML = 'Validando';
 
             // Guardar la información de inicio de sesión en el almacenamiento local
             localStorage.setItem('savedUser', JSON.stringify({ email, password }));
 
-            setTimeout(function() {
+            setTimeout(function () {
                 loginForm.classList.add('ok');
                 state.innerHTML = 'Bienvenido!';
-                setTimeout(function() {
+                setTimeout(function () {
                     state.innerHTML = 'Iniciar sesión';
                     loginForm.classList.remove('ok', 'loading');
                     working = false;
@@ -84,12 +108,12 @@ document.querySelector('#loginForm').addEventListener('submit', (e) => {
                                 // Puedes redirigir al usuario o realizar acciones según su tipo de usuario
                                 if (userType === "Admin") {
                                     window.location.href = "MenuAdmin.html";
-                                } else if(userType === "Vendedor"){
+                                } else if (userType === "Vendedor") {
                                     window.location.href = "index.html"
-                                } else if(userType === "Cliente"){
+                                } else if (userType === "Cliente") {
                                     window.location.href = "indexCliente.html"
                                 } else {
-                                   //window.location.href = "index.html";
+                                    //window.location.href = "index.html";
                                 }
                             }
                         })
@@ -106,10 +130,10 @@ document.querySelector('#loginForm').addEventListener('submit', (e) => {
             // Animacion
             loginForm.classList.add('loading');
             state.innerHTML = 'Validando';
-            setTimeout(function() {
+            setTimeout(function () {
                 loginForm.classList.add('no', 'incorrect');
                 state.innerHTML = 'Correo o contraseña incorrectos';
-                setTimeout(function() {
+                setTimeout(function () {
                     state.innerHTML = 'Iniciar sesión';
                     loginForm.classList.remove('no', 'loading', 'incorrect');
                     working = false;

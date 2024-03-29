@@ -96,7 +96,7 @@ header a:hover {
 
 
 /* Computadoras project */
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
 
     header {
         display: block;
@@ -114,6 +114,6 @@ header a:hover {
         flex-direction: row;
         padding-bottom: 0;
         /* translate: -500px; */
-        transform: translateX(-200px);
+        transform: translateX(-450px);
     }
 }

@@ -11,7 +11,7 @@ const firebaseConfig = {
     storageBucket: "student-app-fb310.appspot.com",
     messagingSenderId: "48534996518",
     appId: "1:48534996518:web:12af5240d14ba2c52888e7",
-  };
+};
 
 // Inicializa Firebase
 const app = initializeApp(firebaseConfig);
@@ -21,6 +21,23 @@ const database = getDatabase(); // Obtener una instancia de la base de datos
 
 // Variable para controlar el estado de carga
 let working = false;
+
+// Comprobar si hay información de inicio de sesión almacenada localmente
+document.addEventListener('DOMContentLoaded', () => {
+    const savedUser = localStorage.getItem('savedUser');
+    if (savedUser) {
+        const { email, password } = JSON.parse(savedUser);
+        signInWithEmailAndPassword(auth, email, password)
+            .then(() => {
+                // Redirigir al usuario a la página correspondiente después del inicio de sesión automático
+                window.location.href = "index.html"; // Cambia esto según tus necesidades
+            })
+            .catch((error) => {
+                console.error('Error al iniciar sesión automáticamente:', error);
+                localStorage.removeItem('savedUser'); // Eliminar información de inicio de sesión guardada si falla el inicio de sesión automático
+            });
+    }
+});
 
 // Resto del código para manejar el inicio de sesión
 document.querySelector('#loginForm').addEventListener('submit', (e) => {
@@ -41,6 +58,10 @@ document.querySelector('#loginForm').addEventListener('submit', (e) => {
             // Acceso exitoso, redirigir a index.html
             loginForm.classList.add('loading');
             state.innerHTML = 'Validando';
+
+            // Guardar la información de inicio de sesión en el almacenamiento local
+            localStorage.setItem('savedUser', JSON.stringify({ email, password }));
+
             setTimeout(function() {
                 loginForm.classList.add('ok');
                 state.innerHTML = 'Bienvenido!';
@@ -94,6 +115,7 @@ document.querySelector('#loginForm').addEventListener('submit', (e) => {
                     working = false;
                 }, 1500);
             }, 1500);
+
 
             working = false;
         });

@@ -51,6 +51,7 @@ header .container {
 
 .fa-solid{
     color: black;
+    font-size: 30px;
 }
 
 .fa-solid:hover{
@@ -84,9 +85,17 @@ header .container {
 }
 
 @media (min-width: 1900px){
+
+    header{
+        margin-top: 20px;
+        width: 100%;
+        z-index: 100;
+    }
+
     header .regresar {
         flex-direction: row;
         padding-bottom: 0;
-        transform: translateX(-650px);
+        transform: translateX(-500px);
     }
+
 }

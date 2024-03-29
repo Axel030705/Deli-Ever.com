@@ -66,7 +66,7 @@ document.querySelector('#loginForm').addEventListener('submit', (e) => {
                                 } else if(userType === "Vendedor"){
                                     window.location.href = "index.html"
                                 } else if(userType === "Cliente"){
-                                    window.location.href = "index.html"
+                                    window.location.href = "indexCliente.html"
                                 } else {
                                    //window.location.href = "index.html";
                                 }

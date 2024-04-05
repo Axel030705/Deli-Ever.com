@@ -123,6 +123,10 @@ header a:hover {
     background-position: center center;
 }
 
+#hero button{
+    display: none;
+}
+
 #hero h1 {
     color: white;
 }
@@ -235,6 +239,7 @@ footer .container {
     }
 
     #hero button {
+        display: flex;
         margin-top: 40px;
         font-size: 3.0em;
     }
@@ -490,6 +495,7 @@ footer .container {
     }
 
     #hero button {
+        display: none;
         font-size: 1.75em;
         margin-top: 10px;
     }

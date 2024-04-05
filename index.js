@@ -29,3 +29,11 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = "Contacto.html";
     });
 });
+
+/* Boton ingresar */
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("Btn_ingresar").addEventListener("click", function () {
+        // Redirigir a otra página
+        window.location.href = "IniciarSesion.html";
+    });
+});

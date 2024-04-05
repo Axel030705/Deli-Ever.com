@@ -59,7 +59,27 @@ header .container {
     cursor: pointer;
 }
 
+@media (max-width: 900px){
 
+    header {
+        display: block;
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+        background-color: blue;
+    }
+
+    header .container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    header .regresar {
+        display: none;
+    }
+
+}
 
 /* Computadoras project */
 @media (min-width: 1024px) {
@@ -80,7 +100,7 @@ header .container {
         flex-direction: row;
         padding-bottom: 0;
         /* translate: -500px; */
-        transform: translateX(-250px);
+        transform: translateX(-100px);
     }
 }
 

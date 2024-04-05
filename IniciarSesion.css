@@ -169,11 +169,22 @@ body {
     }
   
     &:not(.loading) button:hover {
+      cursor: pointer;
       box-shadow: 0px 1px 3px #2196f3; /* Replaced with $primary value */
     }
     &:not(.loading) button:focus {
       border-bottom-width: 4px;
     }
+  }
+
+  .invitado h3{
+    font-size: 12px;
+    color: rgb(133, 133, 133);
+  }
+
+  .invitado h3:hover{
+    cursor: pointer;
+    color: #19A7CE;
   }
 
 

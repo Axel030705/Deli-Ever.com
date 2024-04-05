@@ -67,11 +67,9 @@ header .container {
     align-items: center; /* Centra el contenido verticalmente */
 }
 
-.div{
-    margin: 10px;
-    width:300px;
-    height: 50px;
-    background-color: black;
+.imagenP{
+    max-width: 100px;
+    max-height: 100px
 }
 
 /*Celulares project */
@@ -94,7 +92,6 @@ header .container {
     header .regresar {
         display: none;
     }
-
 }
 
 /* Computadoras project */

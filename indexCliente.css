@@ -67,6 +67,7 @@ header .container {
         width: 100%;
         z-index: 100;
         background-color: blue;
+        font-size: 14px;
     }
 
     header .container {

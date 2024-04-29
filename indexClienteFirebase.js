@@ -25,38 +25,51 @@ const tiendasRef = ref(database, 'Tienda');
 
 // Función para mostrar los datos de los productos en la página
 function mostrarDatosProductos(snapshot) {
-    const contenedorProductos = document.getElementById('containerProducto');
-    contenedorProductos.classList.add('containerProducto')
+    const contenedorProductos = document.getElementById('container');
+    contenedorProductos.classList.add('container');
     contenedorProductos.innerHTML = ''; // Limpiar el contenedor antes de mostrar nuevos datos
 
     snapshot.forEach(function (childSnapshot) {
         const tienda = childSnapshot.val();
-        
+
         // Iterar sobre cada producto de la tienda
         for (const productoId in tienda.productos) {
             const producto = tienda.productos[productoId];
-            
+
             // Crear un contenedor individual para el producto
             const productoContainer = document.createElement('div');
-            productoContainer.classList.add('producto');
+            productoContainer.classList.add('card');
 
             // Construir el contenido del contenedor
-            const imagen = document.createElement('img');
-            imagen.src = producto.imagenUrl;
-            imagen.classList.add('imagenP')
-            const nombre = document.createElement('h2');
+            const contenidoCard = document.createElement('div');
+            contenidoCard.classList.add('contentCard');
+            const nombre = document.createElement('h3');
             nombre.textContent = producto.nombre;
             const descripcion = document.createElement('p');
-            descripcion.textContent = producto.descripcion;
+            const maxLength = 50;
+            descripcion.textContent = producto.descripcion.length > maxLength ? producto.descripcion.substring(0, maxLength) + '...' : producto.descripcion;
             const precio = document.createElement('p');
             precio.textContent = `Precio: $${producto.precio}`;
-            
-            // Agregar elementos al contenedor del producto
-            productoContainer.appendChild(imagen);
-            productoContainer.appendChild(nombre);
-            productoContainer.appendChild(descripcion);
-            productoContainer.appendChild(precio);
-            
+            const extra = document.createElement('p');
+            const maxLengthE = 50;
+            extra.textContent = producto.extra.length > maxLengthE ? producto.extra.substring(0, maxLengthE) + '...' : producto.extra;
+
+            contenidoCard.appendChild(nombre);
+            contenidoCard.appendChild(descripcion);
+            contenidoCard.appendChild(precio);
+            contenidoCard.appendChild(extra);
+
+            const imagenContainer = document.createElement('div');
+            imagenContainer.classList.add('imgP');
+            const imagen = document.createElement('img');
+            imagen.src = producto.imagenUrl;
+            imagen.alt = 'imagen producto';
+
+            imagenContainer.appendChild(imagen);
+
+            productoContainer.appendChild(contenidoCard);
+            productoContainer.appendChild(imagenContainer);
+
             // Agregar el contenedor del producto al contenedor principal
             contenedorProductos.appendChild(productoContainer);
         }

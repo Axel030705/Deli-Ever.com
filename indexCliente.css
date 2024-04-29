@@ -1,17 +1,83 @@
-* {
-    box-sizing: border-box;
-}
-
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
+    margin: 20px;
 }
 
-button {
+.marca{
+    color: rgb(6, 161, 223);
+}
+
+.container{
+    width: auto;
+    max-width: 1920px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card{
+    width: 400px;
+    max-width: 400px;
+    height: 150px;
+    max-height: 150px;
+    border: solid 3px rgb(6, 161, 223);;
+    border-radius: 5px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.contentCard{
+    width: 250px;
+    max-width: 250px;
+    height: 150px;
+    max-height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contentCard h3{
+    width: 200px;
+    height: 50px;
+    max-width: 200px;
+    max-height: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.contentCard p{
+    width: 200px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+}
+
+.imgP{
+    width: 150px;
+    max-width: 150px;
+    height: 150px;
+    max-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgP img{
+    width: 120px;
+    height: 120px;
+}
+
+/* button {
     font-size: 1.25em;
     font-weight: bold;
     padding: 10px 30px;
@@ -29,26 +95,6 @@ button:hover {
     cursor: pointer;
 }
 
-.container {
-    max-width: 1400px;
-    margin: auto;
-}
-
-.color-acento {
-    color: #19A7CE;
-    text-align: center;
-}
-
-header {
-    background-color: rgb(255, 255, 255);
-}
-
-header .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .fa-solid{
     color: black;
     font-size: 30px;
@@ -57,31 +103,11 @@ header .container {
 .fa-solid:hover{
     color: #19A7CE;
     cursor: pointer;
-}
+} */
 
-.containerP{
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    flex-wrap: wrap;
-    display: flex; /* Establece el contenedor como un contenedor flexible */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-}
 
-.imagenP{
-    max-width: 100px;
-    max-height: 100px
-}
 
-.containerProducto{
-    width: 500px;
-    height: 300px;
-    border: 2px solid #19A7CE;
-    margin: 20px;
-}
-
-/*Celulares project */
+/* Celulares project
 @media (max-width: 900px){
 
     header {
@@ -103,7 +129,7 @@ header .container {
     }
 }
 
-/* Computadoras project */
+/* Computadoras project
 @media (min-width: 1024px) {
 
     header {
@@ -120,12 +146,12 @@ header .container {
     header .regresar {
         flex-direction: row;
         padding-bottom: 0;
-        /* translate: -500px; */
+        /* translate: -500px;
         transform: translateX(-100px);
     }
 }
 
-/*Monitores 1080p*/
+/*Monitores 1080p
 @media (min-width: 1900px){
 
     header{
@@ -140,4 +166,4 @@ header .container {
         transform: translateX(-500px);
     }
 
-}
+} */

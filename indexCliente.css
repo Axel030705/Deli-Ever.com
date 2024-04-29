@@ -60,6 +60,8 @@ header .container {
 }
 
 .containerP{
+    width: 100%;
+    height: 100%;
     padding: 20px;
     flex-wrap: wrap;
     display: flex; /* Establece el contenedor como un contenedor flexible */
@@ -70,6 +72,13 @@ header .container {
 .imagenP{
     max-width: 100px;
     max-height: 100px
+}
+
+.containerProducto{
+    width: 500px;
+    height: 300px;
+    border: 2px solid #19A7CE;
+    margin: 20px;
 }
 
 /*Celulares project */

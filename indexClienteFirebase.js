@@ -25,7 +25,8 @@ const tiendasRef = ref(database, 'Tienda');
 
 // Función para mostrar los datos de los productos en la página
 function mostrarDatosProductos(snapshot) {
-    const contenedorProductos = document.getElementById('containerP');
+    const contenedorProductos = document.getElementById('containerProducto');
+    contenedorProductos.classList.add('containerProducto')
     contenedorProductos.innerHTML = ''; // Limpiar el contenedor antes de mostrar nuevos datos
 
     snapshot.forEach(function (childSnapshot) {
@@ -48,7 +49,7 @@ function mostrarDatosProductos(snapshot) {
             const descripcion = document.createElement('p');
             descripcion.textContent = producto.descripcion;
             const precio = document.createElement('p');
-            precio.textContent = `Precio: ${producto.precio}`;
+            precio.textContent = `Precio: $${producto.precio}`;
             
             // Agregar elementos al contenedor del producto
             productoContainer.appendChild(imagen);

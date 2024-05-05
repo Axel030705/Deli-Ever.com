@@ -40,7 +40,8 @@ function mostrarDatosProductos(snapshot) {
             const productoContainer = document.createElement('div');
             // Agregamos el evento de clic
             productoContainer.addEventListener('click', function () {
-                alert("¡Se hizo clic en el contenedor de producto!");
+                // Redireccionar a otra página
+                window.location.href = 'detalles_producto.html';
             });
             productoContainer.classList.add('card');
 

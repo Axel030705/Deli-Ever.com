@@ -12,7 +12,7 @@ document.getElementById('cantidadProducto').textContent = `Cantidad disponible: 
 
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
-import { getDatabase, ref, update } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+import { getDatabase, ref, update, get } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBtBtN6py9WVmPz7siJ8jBaAwURLdx_mCg",
@@ -30,27 +30,17 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
 // Agregar un evento click al botón de comprar
-document.getElementById('Btn_comprar').addEventListener('click', function () {
-    // Obtener la cantidad ingresada por el usuario
-    const cantidad = parseInt(document.getElementById('cantidad').value);
-    // Verificar si la cantidad está dentro del inventario disponible
-    if (cantidad <= productoSeleccionado.cantidad) {
-        // Reducir la cantidad en la base de datos
-        const nuevoInventario = productoSeleccionado.cantidad - cantidad;
-        const productoRef = ref(database, 'Tienda/productos/' + productoSeleccionado.id);
-        update(productoRef, { cantidad: nuevoInventario })
-            .then(() => {
-                // Aquí puedes agregar la lógica para procesar la compra
-                console.log('Procesando compra de', cantidad, 'productos');
-                // Redirigir al usuario a una página de confirmación de compra, por ejemplo:
-                window.location.href = 'confirmacion_compra.html';
-            })
-            .catch(error => {
-                console.error('Error al reducir la cantidad en la base de datos:', error);
-                alert('Error al procesar la compra. Inténtalo de nuevo más tarde.');
-            });
-    } else {
-        // Mostrar un mensaje de error si la cantidad excede el inventario disponible
-        alert('La cantidad seleccionada excede el inventario disponible');
+document.getElementById('Btn_comprar').addEventListener('click', async function () {
+    try {
+        // Obtener la cantidad ingresada por el usuario
+        const cantidad = parseInt(document.getElementById('cantidad').value);
+        // Verificar si la cantidad está dentro del inventario disponible
+        if (cantidad <= productoSeleccionado.cantidad) {
+            const nuevoInventario = productoSeleccionado.cantidad - cantidad;
+
+        }
+
+    } catch (error) {
+        alert('Error al procesar la compra. Inténtalo de nuevo más tarde.');
     }
 });

@@ -53,7 +53,9 @@ document.getElementById('Btn_comprar').addEventListener('click', async function 
     try {
         // Obtener la cantidad ingresada por el usuario
         const cantidad = parseInt(document.getElementById('cantidad').value);
-        
+        if(cantidad < 1){    
+            alert('La cantidad debe ser al menos 1');
+        }else{
         // Verificar si la cantidad está dentro del inventario disponible
         if (cantidad <= productoSeleccionado.cantidad) {
             const nuevoInventario = productoSeleccionado.cantidad - cantidad;
@@ -64,6 +66,7 @@ document.getElementById('Btn_comprar').addEventListener('click', async function 
         } else {
             alert('La cantidad seleccionada excede el inventario disponible');
         }
+    }
     } catch (error) {
         alert('Error al procesar la compra. Inténtalo de nuevo más tarde.');
     }

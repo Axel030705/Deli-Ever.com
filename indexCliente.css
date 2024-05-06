@@ -33,6 +33,11 @@ body {
     flex-direction: row;
 }
 
+.card:hover{
+    cursor: pointer;
+    border: solid 3px rgb(0, 183, 255);;
+}
+
 .contentCard{
     width: 250px;
     max-width: 250px;

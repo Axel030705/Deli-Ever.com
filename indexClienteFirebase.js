@@ -42,6 +42,8 @@ function mostrarDatosProductos(snapshot) {
             productoContainer.addEventListener('click', function () {
                 // Redireccionar a otra página
                 window.location.href = 'detalles_producto.html';
+                //Pasarle el producto con un json
+                localStorage.setItem('productoSeleccionado', JSON.stringify(producto));
             });
             productoContainer.classList.add('card');
 

@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="media/icono.png">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalles</title>
+    <link rel="stylesheet" href="detalles_producto.css">
+    <title>Detalles del producto</title>
+    <script type="module" src="detalles_producto.js"></script>
 </head>
+
 <body>
-    
+
+    <center>
+        <h1 class="TituloPagina">Detalles del <span class="marca">producto</span></h1>
+    </center>
+
+    <div class="container" id="container">
+
+        <div class="card">
+            <div class="contentCard">
+                <center><img id="imagenProducto" class="imgP"></center>
+                <center><h2 id="nombreProducto"></h2></center>
+                <center><p id="descripcionProducto"></p></center>
+                <center><p id="precioProducto"></p></center>
+                <center><p id="extraProducto"></p></center>
+                <center><p id="cantidadProducto"></p></center>
+            </div>
+        </div>
+
+    </div>
+
 </body>
+
 </html>

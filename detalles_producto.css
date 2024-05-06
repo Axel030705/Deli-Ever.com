@@ -1,0 +1,53 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 20px;
+}
+
+.marca{
+    color: rgb(6, 161, 223);
+}
+
+.container{
+    width: auto;
+    max-width: 1920px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+.card{
+    width: 400px;
+    max-width: 400px;
+    height: 550px;
+    max-height: 550px;
+    border: solid 3px rgb(6, 161, 223);;
+    border-radius: 5px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.contentCard{
+    width: 400px;
+    max-width: 400px;
+    height: 500px;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    margin: 20px;
+}
+
+.imgP{
+    width: 150px;
+    max-width: 150px;
+    height: 150px;
+    max-height: 150px;
+}

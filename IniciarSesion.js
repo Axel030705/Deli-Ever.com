@@ -4,14 +4,14 @@ import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/fir
 import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBPUzD4vFqqtCWQ3Pxf-x9eSWZKT3x2UHY",
-  authDomain: "deli-ever-ee94d.firebaseapp.com",
-  databaseURL: "https://deli-ever-ee94d-default-rtdb.firebaseio.com",
-  projectId: "deli-ever-ee94d",
-  storageBucket: "deli-ever-ee94d.appspot.com",
-  messagingSenderId: "867324946309",
-  appId: "1:867324946309:web:60471fd602118b278a06ec",
-  measurementId: "G-DPMYMF1668"
+    apiKey: "AIzaSyBPUzD4vFqqtCWQ3Pxf-x9eSWZKT3x2UHY",
+    authDomain: "deli-ever-ee94d.firebaseapp.com",
+    databaseURL: "https://deli-ever-ee94d-default-rtdb.firebaseio.com",
+    projectId: "deli-ever-ee94d",
+    storageBucket: "deli-ever-ee94d.appspot.com",
+    messagingSenderId: "867324946309",
+    appId: "1:867324946309:web:f9c132a70d7f29138a06ec",
+    measurementId: "G-HGHQV4M9KR"
 };
 
 // Inicializa Firebase
